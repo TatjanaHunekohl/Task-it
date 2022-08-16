@@ -844,6 +844,10 @@ body {
         height: 100vh;
     }
 
+    .inner-main {
+        width: calc( 100vw - 225px); 
+    }
+
     .board-wrapper {
         display: flex;
         justify-content: space-evenly;

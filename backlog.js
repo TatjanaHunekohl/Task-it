@@ -20,7 +20,7 @@ function generateBacklog(element) {
             <img src="Profilpicture/profilepicture2.png" class="assignedTo">
             <div class="assignedToText">
             <span class="namebacklog">Britney </span> <br>
-            <span class="emailbacklog">Britneys E-Mail</span></div>
+            <span class="emailbacklog">britney@outlook.com</span></div>
         </div>
         <div class="backlogCardCategory width20">
             <span>${element.category} </span>
