@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link type="image/png" sizes="32x32" rel="icon" href="img/board.png">
+    <script language="javascript" type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="init()">
+
+    <div class="main archive">
+        <div class="navbar-mobil">
+            <a href="board.html"><img src="img/taskit.svg" class="logo-navM" alt=""></a>
+            <img src="img/menu-bar.svg" alt="" class="nav-icon" onclick="showNavMobil()">
+            <div id="pop-nav" class="d-none pop-nav">
+                <span onclick="closePopNav()" class="x-span">X</span>
+                <ul>
+                    <li><a href="board.html">BOARD</a></li>
+                    <li><a href="backlog.html">BACKLOG</a></li>
+                    <li><a href="addTask.html">ADD TASK</a></li>
+                    <li><a href="archive.html">ARCHIVE</a></li>
+                    <li><a href="help.html">HELP</a></li>
+                </ul>
+            </div>
+        </div>
+        <div w3-include-html="navbar.html" class="navbar-wrapper"></div>
+
+        <div class="content">
+
+            <h2>Help</h2>
+
+            <div class="wrapper-help-sctn">
+                <div class="KanbanMeaning">
+                    <h4 class="Helph4">WHAT IS TASK IT! ?</h4> <br>
+                    <div>
+                    Task it! is a Kanban board. <br>
+                    It gives you an overview of your current work situation and helps visualizing the
+                    project flow in agile project management.<br><br>This app was built as an training
+                    project by Developerakademie.
+                    </div>
+                </div>
+                
+        
+                <div class="KanbanMeaning">
+                <h4 class="Helph4">ADD A TASK</h4> <br>
+                <div>
+                    - Create new task <br>
+                    - Fill the form and set a due date<br>
+                    - Decide whether the task should end up in the board for direct processing or in
+                    the backlog first.
+                </div>
+                </div>
+
+                <div class="KanbanMeaning">
+                <h4 class="Helph4">THE BOARD</h4><br>
+                <div>
+                    - Each task passes through 4 stages.<br>
+                    - You can move the task by drag and drop.<br>
+                    - Archive or delete the completet task.<br>
+                    - Click on the task to see details.<br>
+                </div>
+                 </div>
+
+                <div class="KanbanMeaning">
+                    <h4 class="Helph4">THE BACKLOG</h4><br>
+                    <div>
+                    The backlog is a collection of upcoming tasks and ideas that are not yet in the
+                    focus of the project team.
+                    You can edit the task by clicking on it.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link type="image/png" sizes="32x32" rel="icon" href="img/board.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="board.js"></script>
+    <script language="javascript" type="text/javascript" src="script.js"></script>
+    <script language="javascript" type="text/javascript" src="addTask.js"></script>
+    <script src="./mini_backend.js"></script>
+</head>
+
+<body onload="init() ; initBackend()">
+
+    <div class="main">
+        <div class="navbar-mobil">
+            <a href="board.html"><img src="img/taskit.svg" class="logo-navM" alt=""></a>
+            <img src="img/menu-bar.svg" alt="" class="nav-icon" onclick="showNavMobil()">
+            <div id="pop-nav" class="d-none pop-nav">
+                <span onclick="closePopNav()" class="x-span">X</span>
+                <ul>
+                    <li><a href="board.html">BOARD</a></li>
+                    <li><a href="backlog.html">BACKLOG</a></li>
+                    <li><a href="addTask.html">ADD TASK</a></li>
+                    <li><a href="archive.html">ARCHIVE</a></li>
+                    <li><a href="help.html">HELP</a></li>
+                </ul>
+            </div>
+        </div>
+        <div w3-include-html="navbar.html" class="navbar-wrapper"></div>
+
+        <div class="content">
+            <h2>Add Task</h2>
+
+            <form id="form" onsubmit="addTask(); return false" >
+                <div class="addTaskBox">
+                    <div class="firstRow flexAddTask">
+                        <div class="width50 marginLeft">
+                            <h4 class="blueText">TITLE</h4>
+                            <input id="title" placeholder="Title" required>
+                        </div>
+
+                        <div class="width50">
+                            <h4 class="blueText">DUE DATE</h4>
+                            <input type="date" id="dueDate" required>
+                        </div>
+                    </div>
+
+                    <div class="secondRow flexAddTask">
+                        <div class="width50 marginLeft">
+                            <h4 class="blueText">CATEGORY</h4>
+                            <select id="category" required>
+                                <option value="">none</option>
+                                <option value="Managment">Management</option>
+                                <option value="Marketing">Marketing</option>
+                                <option value="Product">Product</option>
+                                <option value="Sale">Sale</option>
+                            </select>
+                        </div>
+                        <div class="width50">
+                            <h4 class="blueText">URGENCY</h4>
+                            <select id="urgency" required>
+                                <option value="">none</option>
+                                <option value="High">High</option>
+                                <option value="Medium">Medium</option>
+                                <option value="Low">Low</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="thirdRow flexAddTask">
+                        <div class="width50 marginLeft">
+                            <h4 class="blueText">DESCRIPTION</h4>
+                            <textarea id="text" required>Describe your task..</textarea>
+                        </div>
+
+                        <div class="width50">
+                            <div class="assignedToRow2">
+                                <button type="reset" class="button-no-default-style"><img src="img/trash.png" alt="" class="cancelbutton"></button>
+                                <button type="submit" class="createTask" id="create-task">CREATE TASK</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+    
+       
+        
+
+</body>
+
+</html>

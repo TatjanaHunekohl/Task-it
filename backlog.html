@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link type="image/png" sizes="32x32" rel="icon" href="img/board.png"> 
+    <link rel="stylesheet" href="style.css">
+    <script src="./mini_backend.js"></script>
+    
+    <script language="javascript" type="text/javascript" src="script.js"></script>
+    <script language="javascript" type="text/javascript" src="addTask.js"></script>
+    <script language="javascript" type="text/javascript" src="backlog.js"></script>
+    <script language="javascript" type="text/javascript" src="board.js"></script>
+</head>
+
+<body onload="init() ; initBackend() ; initBacklog()">
+
+    <div class="main">
+
+        <div class="inner-main">
+
+        <div class="navbar-mobil">
+            <a href="board.html"><img src="img/taskit.svg" class="logo-navM" alt=""></a>
+            <img src="img/menu-bar.svg" alt="" class="nav-icon" onclick="showNavMobil()">
+            <div id="pop-nav" class="d-none pop-nav">
+                <span onclick="closePopNav()" class="x-span">X</span>
+                <ul>
+                    <li><a href="board.html">BOARD</a></li>
+                    <li><a href="backlog.html">BACKLOG</a></li>
+                    <li><a href="addTask.html">ADD TASK</a></li>
+                    <li><a href="archive.html">ARCHIVE</a></li>
+                    <li><a href="help.html">HELP</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div w3-include-html="navbar.html" class="navbar-wrapper"></div>
+
+        <div class="content">
+            
+                <h2>Backlog</h2>
+            
+
+                <div class="headlineContainer">
+                    <div class="width30  h2 blueText"><b>ASSIGNED TO</b></div>
+                    <div class="width20  h2 blueText"><b>CATEGORY</b></div>
+                    <div class="width50bl h2 blueText"><b>DETAILS</b></div>
+                </div>
+    
+                <div class="backlogCard-wrapper" id="backlogCardWrapper">
+                </div>
+            
+        </div>
+
+    </div>
+    </div>
+
+    
+</body>
+</html>

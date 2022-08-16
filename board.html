@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Board</title>
+    <link type="image/png" sizes="32x32" rel="icon" href="img/board.png">
+    <script src="./mini_backend.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="board.js"></script>
+    <script language="javascript" type="text/javascript" src="script.js"></script>
+    <script language="javascript" type="text/javascript" src="addTask.js"></script>
+    <script language="javascript" type="text/javascript" src="backlog.js"></script>
+   
+    
+</head>
+
+
+<body onload="init() ; initBackend() ; initFilter()">
+
+    <div class="main">
+        <div class="navbar-mobil">
+            <a href="board.html"><img src="img/taskit.svg" class="logo-navM" alt=""></a>
+            <img src="img/menu-bar.svg" alt="" class="nav-icon" onclick="showNavMobil()">
+            <div id="pop-nav" class="d-none pop-nav">
+                <span onclick="closePopNav()" class="x-span">X</span>
+                <ul>
+                    <li><a href="board.html">BOARD</a></li>
+                    <li><a href="backlog.html">BACKLOG</a></li>
+                    <li><a href="addTask.html">ADD TASK</a></li>
+                    <li><a href="archive.html">ARCHIVE</a></li>
+                    <li><a href="help.html">HELP</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div w3-include-html="navbar.html" class="navbar-wrapper"></div>
+
+        <div class="content">
+            <div class="board-wrapper">
+                <div class="column">
+                    <h3>TO DO</h3>
+                    <div class="DragAndDrop">
+                        <div class="grey-container" ondrop="moveTo('toDo')" ondragover="allowDrop(event)" id="toDo"> 
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <h3>IN PROGRESS</h3>
+                    <div class="DragAndDrop">
+                        <div class="grey-container" ondragover="allowDrop(event)" ondrop="moveTo('inProgress')"  id="inProgress"></div>
+                    </div>
+                </div>
+                <div class="column">
+                    <h3>TESTING</h3>
+                    <div class="DragAndDrop">
+                        <div class="grey-container" ondrop="moveTo('testing')" ondragover="allowDrop(event)" id="testing"></div>
+                    </div>
+                </div>
+                <div class="column">
+                    <h3>DONE</h3>
+                    <div class="DragAndDrop">
+                        <div class="grey-container" ondrop="moveTo('done')" ondragover="allowDrop(event)" id="done"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
